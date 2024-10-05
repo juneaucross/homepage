@@ -33,7 +33,7 @@ jobs:
     - name: Copy
       uses: s0/git-publish-subdir-action@develop
       env:
-        REPO: git@github.com:juneaucross/homepage.git
+        REPO: https://github.com/juneaucross/homepage.git
         BRANCH: gh-pages
         FOLDER: docs
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
