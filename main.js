@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import model from './assets/rap_export2.gltf';
+import model from './rap_export2.gltf';
 import deviceRotation from 'device-rotation';
 import { getBrowserVersion, isAndroid } from './utils/browserVersion.js';
 import { setCfg } from './utils/setCfg.js';
-import { sceneCfg } from './assets/sceneCfg.js';
+import { sceneCfg } from './sceneCfg.js';
 import { getDateString } from './utils/date.js';
 import { TypeShuffle, initAccordionShuffle } from './utils/typeShuffle.js';
 
