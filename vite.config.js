@@ -7,7 +7,7 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   build: {
     outDir: './docs',
-    base: 'https://juneaucross.github.io/homepage/',
+    // base: 'https://juneaucross.github.io/homepage/',
     assetsInclude: ['**/*.gltf'],
     sourcemap: true,
     cssMinify: true,
