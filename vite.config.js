@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   build: {
+    outDir: '../docs',
     base: 'https://rap.digital/',
     assetsInclude: ['**/*.gltf'],
     sourcemap: true,
