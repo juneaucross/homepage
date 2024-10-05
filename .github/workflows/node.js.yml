@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "gh-pages" ]
+    branches: [ "deploy" ]
   workflow_dispatch:
 
 jobs:
@@ -30,11 +30,11 @@ jobs:
     - run: npm run build
     - run: ls
 
-    # - name: Copy
-    #   uses: s0/git-publish-subdir-action@develop
-    #   env:
-    #     REPO: git@github.com:rapdgtl/homepage.git
-    #     BRANCH: prod
-    #     FOLDER: dist
-    #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Copy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: git@github.com:juneaucross/homepage.git
+        BRANCH: gh-pages
+        FOLDER: docs
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
